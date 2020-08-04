@@ -1,0 +1,79 @@
+// Main Elements normalization
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+
+html {
+    height: 100%;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    height: 100%;
+    color: $color__black;
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    overflow-x: hidden; // not scrolling horizontal body
+
+    backface-visibility: hidden;
+}
+
+
+// No outline on focus controls
+button,
+input,
+textarea,
+a {
+    outline: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none !important;
+    }
+}
+
+
+// Sections
+
+// All blocks to border-box
+main,
+article,
+aside,
+figure,
+address section,
+div,
+form,
+fieldset,
+input,
+select,
+button,
+a {
+    box-sizing: border-box;
+}
+
+main,
+article,
+aside,
+figure,
+address,
+div,
+form,
+fieldset,
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+
+// Lists
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

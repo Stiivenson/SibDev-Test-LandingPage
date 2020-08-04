@@ -1,0 +1,31 @@
+// Grid
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+
+.body-grid {
+    display: grid;
+    grid-template-areas:
+        "aside header"
+        "aside main";
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 20% 1fr;
+
+    background-color: $color__primary;
+}
+
+.header {
+    grid-area: header;
+
+    background-color: $color__white;
+}
+
+.aside {
+    grid-area: aside;
+
+    background-color: $color__secondary;
+}
+
+.main {
+    grid-area: main;
+}
