@@ -1,0 +1,27 @@
+// Aside block with navigation
+//////////////////////////////////////////////////////
+
+
+.company-label {
+    cursor: pointer;
+    margin-bottom: 40px;
+
+    .company-label__logo {
+        margin-right: 10px;
+    }
+}
+
+.navigation {
+    li {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+
+        padding: 20px 0;
+
+        figure {
+            margin-right: 12px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+// Elements styles
+//////////////////////////////////////////////////////
+// Styles for all main elements
+
+body {
+    position: relative;
+    padding-left: 240px;
+
+    background-color: $color__primary;
+}
+
+header {
+    padding: 2.5rem 3.75rem;
+
+    background-color: $color__white;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 240px;
+    padding: 2.5rem;
+
+    background-color: $color__secondary;
+}
+
+main {
+    padding: 2.5rem 3.75rem;
+}

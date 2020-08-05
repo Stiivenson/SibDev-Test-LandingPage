@@ -14,11 +14,11 @@ body {
     margin: 0;
     padding: 0;
 
-    font-family: sans-serif;
+    font-size: $font-size--base;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    overflow-x: hidden; // not scrolling horizontal body
+    overflow-x: hidden;
 
     backface-visibility: hidden;
 }
@@ -65,7 +65,14 @@ address,
 div,
 form,
 fieldset,
-pre {
+pre,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
     padding: 0;
 }
@@ -76,4 +83,11 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+
+// Forms
+input {
+    border: none;
+    box-shadow: none;
 }

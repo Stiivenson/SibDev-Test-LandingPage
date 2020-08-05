@@ -1,3 +1,128 @@
 // Typography
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
+
+//Open Sans - SemiBold, Reg
+//Poppins - Medium
+//Roboto - Bold, Med, Reg
+
+$fonts-directroy: './style/fonts/';
+
+$ff__sans: 'OpenSans';
+$fw__sans__smbold: 600;
+$fw__sans__regular: 400;
+
+@font-face {
+    font-family: $ff__sans;
+    src: url($fonts-directroy+'opensans/opensans.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: $ff__sans;
+    src: url($fonts-directroy+'opensans/opensanssemibold.woff') format('woff');
+    font-weight: 600;
+}
+
+
+$ff__pop: 'Poppins';
+$fw__pop__smbold: 500;
+
+@font-face {
+    font-family: $ff__pop;
+    src: url($fonts-directroy+'poppins/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+
+$ff__roboto: 'Roboto';
+$fw__roboto__bold: 700;
+$fw__roboto__medium: 500;
+$fw__roboto__regular: 400;
+
+@font-face {
+    font-family: $ff__roboto;
+    src: url($fonts-directroy+'roboto/Roboto-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: $ff__roboto;
+    src: url($fonts-directroy+'roboto/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: $ff__roboto;
+    src: url($fonts-directroy+'roboto/Roboto-Bold.woff') format('woff');
+    font-weight: 700;
+}
+
+
+// Good line-height and letter-spacing
+$line-height--base: 1.428571429;
+$normal-letter-spacing: normal;
+
+// Font variables
+
+$font-size--base: 16px;
+$font-size__coefficient--large: 2.25;
+$font-size__coefficient--header: 1.75;
+$font-size__coefficient--subheading: 1.125;
+
+// 36 28 18 16
+// 28 24 14 12
+
+$font-size--large: round($font-size--base * $font-size__coefficient--large); // 36px
+$font-size--header: round($font-size--base * $font-size__coefficient--header); // 28px
+$font-size--subheading: round($font-size--base * $font-size__coefficient--subheading); // 18px
+
+$line-height--computed: round($font-size--base * $line-height--base);
+$line-height--large: floor($line-height--computed * $font-size__coefficient--large);
+$line-height--header: floor($line-height--computed * $font-size__coefficient--header);
+
+
+// Universal Typographic Mixin
+//////////////////////////////////////////////////////
+
+@mixin text($font-family, $font-size, $font-weight) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+
+    @if $font-size==$font-size--large {
+        line-height: $line-height--large;
+    }
+
+    @else if $font-size==$font-size--header {
+        line-height: $line-height--header;
+    }
+
+    @else {
+        line-height: $font-size;
+    }
+}
+
+
+// Base Typographic
+//////////////////////////////////////////////////////
+
+h1 {
+    @include text($ff__sans, $font-size--header, $fw__sans__smbold);
+}
+
+h3 {
+    @include text($ff__roboto, $font-size--base, $fw__roboto__bold);
+}
+
+p {
+    @include text($ff__roboto, $font-size--base, $fw__roboto__regular);
+}
+
+.coupon__discount span {
+    @include text($ff__roboto, $font-size--large, $fw__roboto__medium);
+}
+
+input {
+    @include text($ff__sans, $font-size--subheading, $fw__sans__regular);
+}

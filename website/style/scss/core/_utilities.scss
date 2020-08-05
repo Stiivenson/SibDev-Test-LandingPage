@@ -1,3 +1,53 @@
 // Project Utilities
 //////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
+// Fast and useful classes-utilities, include inside HTML
+
+
+// Images 
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.is-24x24 {
+        height: 24px;
+        width: 24px;
+    }
+
+    &.is-50x50 {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+
+// Flex-containers
+
+.is-flex-row-flxst {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.is-flex-row-cent {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-flex-row-grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.is-flex-column {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
