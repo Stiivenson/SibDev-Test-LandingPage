@@ -26,7 +26,7 @@ $fw__sans__regular: 400;
 
 
 $ff__pop: 'Poppins';
-$fw__pop__smbold: 500;
+$fw__pop__medium: 500;
 
 @font-face {
     font-family: $ff__pop;
@@ -125,4 +125,12 @@ p {
 
 input {
     @include text($ff__sans, $font-size--subheading, $fw__sans__regular);
+}
+
+.company-label__title {
+    @include text($ff__pop, $font-size--base, $fw__pop__medium);
+}
+
+nav li {
+    @include text($ff__sans, $font-size--base, $fw__sans__smbold);
 }

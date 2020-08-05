@@ -2,7 +2,6 @@ package-lock.json
 
 .vscode/
 node_modules/
-website/html+css+js/css/bulma/
 
 template.css
 template.js
