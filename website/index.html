@@ -1,635 +1,694 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BECO Services</title>
     <link rel="stylesheet" href="template.min.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="is-flex-column">
-        <h1>Развлечения</h1>
-        <div class="search is-flex-row-flxst">
-            <figure class="search__logo image is-24x24">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M4.16667 9.16667C4.16667 12.8486 7.15143 15.8333 10.8333 15.8333C14.5152 15.8333 17.5 12.8486 17.5 9.16667C17.5 5.48477 14.5152 2.5 10.8333 2.5C7.15143 2.5 4.16667 5.48477 4.16667 9.16667Z"
-                        stroke="#D6D6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M2.5 17.5L6.125 13.875" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </figure>
-            <input class="search__input" type="text" placeholder="Какой магазин вам нужен?" />
-        </div>
+      <h1>Развлечения</h1>
+      <div class="search is-flex-row-flxst">
+        <figure class="search__logo image is-24x24">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M4.16667 9.16667C4.16667 12.8486 7.15143 15.8333 10.8333 15.8333C14.5152 15.8333 17.5 12.8486 17.5 9.16667C17.5 5.48477 14.5152 2.5 10.8333 2.5C7.15143 2.5 4.16667 5.48477 4.16667 9.16667Z"
+              stroke="#D6D6D6"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path d="M2.5 17.5L6.125 13.875" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </figure>
+        <input class="search__input" type="text" placeholder="Какой магазин вам нужен?" />
+      </div>
     </header>
     <aside class="is-flex-column">
-        <div class="company-label is-flex-row-flxst">
-            <figure class="company-label__logo image is-50x50">
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                    <g clip-path="url(#clip0)">
-                        <path
-                            d="M24.9618 49.9615C38.7478 49.9615 49.9236 38.7858 49.9236 24.9997C49.9236 11.2137 38.7478 0.0379028 24.9618 0.0379028C11.1758 0.0379028 0 11.2137 0 24.9997C0 38.7858 11.1758 49.9615 24.9618 49.9615Z"
-                            fill="#34ABE0" />
-                        <path
-                            d="M50 25.0003C50 28.6559 49.2145 32.1281 47.8024 35.257C44.3363 42.9381 37.0953 48.5509 28.4443 49.7307C27.5233 49.8571 26.5859 49.9325 25.6364 49.9549C25.4377 49.9599 25.238 49.962 25.0383 49.962C15.886 49.962 7.885 45.0369 3.53959 37.693C3.13412 37.0063 2.75912 36.2993 2.41889 35.5728C1.99096 34.6569 1.61606 33.7114 1.29916 32.7383L33.9991 0.0384521L34.1305 1.74607L34.3709 4.85144L39.185 5.22537L39.5589 10.0385L44.372 10.4124L44.7459 15.2264L48.1234 15.4883C49.3327 18.4205 50 21.6319 50 25.0003Z"
-                            fill="#F9EED7" />
-                        <path
-                            d="M50 25.0003C50 28.6559 49.2144 32.1281 47.8023 35.257L23.2918 10.7455L33.999 0.0384521L34.1304 1.74607L34.3708 4.85144L39.1849 5.22537L39.5588 10.0385L44.3719 10.4124L44.7459 15.2264L48.1233 15.4883C49.3326 18.4205 50 21.6319 50 25.0003Z"
-                            fill="#FF525D" />
-                        <path
-                            d="M34.8375 37.3996L32.2374 34.7995C30.4238 32.9859 28.5552 33.5351 27.0168 35.0735C25.461 36.6304 24.9292 38.4806 26.7427 40.2931L29.3428 42.8941C31.1564 44.7066 33.0066 44.1759 34.5624 42.619C36.1008 41.0808 36.651 39.2132 34.8375 37.3996ZM32.9699 41.0257C32.4013 41.5942 31.7972 41.6482 31.193 41.044L28.592 38.4439C27.9878 37.8397 28.0428 37.2346 28.6103 36.6671C29.1789 36.0996 29.8013 36.0263 30.4055 36.6304L33.0066 39.2314C33.6108 39.8357 33.5374 40.4582 32.9699 41.0257ZM28.3912 49.4506L21.6332 29.799C21.5782 29.6349 21.4681 29.4883 21.3581 29.3782C20.7722 28.7924 19.8196 28.9748 19.3071 29.4883C18.977 29.8174 18.8313 30.2575 18.9953 30.7149L25.6361 49.9549C26.5857 49.9324 27.523 49.857 28.444 49.7308C28.4411 49.633 28.4238 49.5392 28.3912 49.4506ZM20.5338 39.9091L17.9337 37.308C16.1202 35.4955 14.2527 36.0446 12.7142 37.5831C11.1574 39.1399 10.6266 40.9892 12.4391 42.8026L15.0402 45.4027C16.8527 47.2163 18.703 46.6854 20.2597 45.1287C21.7982 43.5901 22.3474 41.7216 20.5338 39.9091ZM18.6663 43.5351C18.0988 44.1026 17.4936 44.1577 16.8894 43.5535L14.2893 40.9524C13.6841 40.3482 13.7391 39.744 14.3077 39.1766C14.8751 38.6091 15.4977 38.5357 16.1019 39.1398L18.703 41.7399C19.3072 42.3441 19.2337 42.9677 18.6663 43.5351Z"
-                            fill="#FFD15C" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0">
-                            <rect width="50" height="50" fill="white" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </figure>
-            <div class="company-label__title">
-                BECO
-            </div>
+      <input class="aside__toggle-input" type="checkbox" />
+      <div class="aside__toggle-btn">
+        <div class="toggle-btn__wrapper is-flex-column-cent">
+          <span class="toggle-btn__span"></span>
+          <span class="toggle-btn__span"></span>
+          <span class="toggle-btn__span"></span>
         </div>
-        <nav class="navigation">
-            <ul>
-                <li>
-                    <figure class="search__logo image is-24x24">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 3H3V10H10V3Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M21 3H14V10H21V3Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M21 14H14V21H21V14Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M10 14H3V21H10V14Z" stroke="#333333" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </figure>
-                    <span>Каталог</span>
-                </li>
-                <li>
-                    <figure class="search__logo image is-24x24">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 12H18L15 21L9 3L6 12H2" stroke="black" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </figure>
-                    <span>Здоровье</span>
-                </li>
-                <li>
-                    <figure class="search__logo image is-24x24">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.93789 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7563 5.72718 21.351 5.12075 20.84 4.61V4.61Z"
-                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </figure>
-                    <span>Красота</span>
-                </li>
-                <li>
-                    <figure class="search__logo image is-24x24">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0)">
-                                <path
-                                    d="M16 22V18.13C16.0375 17.6532 15.9731 17.1738 15.811 16.7238C15.6489 16.2738 15.3929 15.8634 15.06 15.52C18.2 15.17 21.5 13.98 21.5 8.52C21.4997 7.12383 20.9627 5.7812 20 4.77C20.4559 3.54851 20.4236 2.19835 19.91 0.999999C19.91 0.999999 18.73 0.649999 16 2.48C13.708 1.85882 11.292 1.85882 9 2.48C6.27 0.649999 5.09 0.999999 5.09 0.999999C4.57638 2.19835 4.54414 3.54851 5 4.77C4.03013 5.7887 3.49252 7.14346 3.5 8.55C3.5 13.97 6.8 15.16 9.94 15.55C9.611 15.89 9.35726 16.2954 9.19531 16.7399C9.03335 17.1844 8.96681 17.6581 9 18.13V22M9 19C4 20.5 4 16.5 2 16L9 19Z"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0">
-                                    <rect width="24" height="24" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </figure>
-                    <span>Развлечения</span>
-                </li>
-                <li>
-                    <figure class="search__logo image is-24x24">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 3H1V16H16V3Z" stroke="black" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M16 8H20L23 11V16H16V8Z" stroke="black" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M5.5 21C6.88071 21 8 19.8807 8 18.5C8 17.1193 6.88071 16 5.5 16C4.11929 16 3 17.1193 3 18.5C3 19.8807 4.11929 21 5.5 21Z"
-                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M18.5 21C19.8807 21 21 19.8807 21 18.5C21 17.1193 19.8807 16 18.5 16C17.1193 16 16 17.1193 16 18.5C16 19.8807 17.1193 21 18.5 21Z"
-                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </figure>
-                    <span>Авто</span>
-                </li>
-            </ul>
-        </nav>
+      </div>
+      <div class="company-label is-flex-row-flxst">
+        <figure class="company-label__logo image is-50x50">
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <g clip-path="url(#clip0)">
+              <path
+                d="M24.9618 49.9615C38.7478 49.9615 49.9236 38.7858 49.9236 24.9997C49.9236 11.2137 38.7478 0.0379028 24.9618 0.0379028C11.1758 0.0379028 0 11.2137 0 24.9997C0 38.7858 11.1758 49.9615 24.9618 49.9615Z"
+                fill="#34ABE0"
+              />
+              <path
+                d="M50 25.0003C50 28.6559 49.2145 32.1281 47.8024 35.257C44.3363 42.9381 37.0953 48.5509 28.4443 49.7307C27.5233 49.8571 26.5859 49.9325 25.6364 49.9549C25.4377 49.9599 25.238 49.962 25.0383 49.962C15.886 49.962 7.885 45.0369 3.53959 37.693C3.13412 37.0063 2.75912 36.2993 2.41889 35.5728C1.99096 34.6569 1.61606 33.7114 1.29916 32.7383L33.9991 0.0384521L34.1305 1.74607L34.3709 4.85144L39.185 5.22537L39.5589 10.0385L44.372 10.4124L44.7459 15.2264L48.1234 15.4883C49.3327 18.4205 50 21.6319 50 25.0003Z"
+                fill="#F9EED7"
+              />
+              <path
+                d="M50 25.0003C50 28.6559 49.2144 32.1281 47.8023 35.257L23.2918 10.7455L33.999 0.0384521L34.1304 1.74607L34.3708 4.85144L39.1849 5.22537L39.5588 10.0385L44.3719 10.4124L44.7459 15.2264L48.1233 15.4883C49.3326 18.4205 50 21.6319 50 25.0003Z"
+                fill="#FF525D"
+              />
+              <path
+                d="M34.8375 37.3996L32.2374 34.7995C30.4238 32.9859 28.5552 33.5351 27.0168 35.0735C25.461 36.6304 24.9292 38.4806 26.7427 40.2931L29.3428 42.8941C31.1564 44.7066 33.0066 44.1759 34.5624 42.619C36.1008 41.0808 36.651 39.2132 34.8375 37.3996ZM32.9699 41.0257C32.4013 41.5942 31.7972 41.6482 31.193 41.044L28.592 38.4439C27.9878 37.8397 28.0428 37.2346 28.6103 36.6671C29.1789 36.0996 29.8013 36.0263 30.4055 36.6304L33.0066 39.2314C33.6108 39.8357 33.5374 40.4582 32.9699 41.0257ZM28.3912 49.4506L21.6332 29.799C21.5782 29.6349 21.4681 29.4883 21.3581 29.3782C20.7722 28.7924 19.8196 28.9748 19.3071 29.4883C18.977 29.8174 18.8313 30.2575 18.9953 30.7149L25.6361 49.9549C26.5857 49.9324 27.523 49.857 28.444 49.7308C28.4411 49.633 28.4238 49.5392 28.3912 49.4506ZM20.5338 39.9091L17.9337 37.308C16.1202 35.4955 14.2527 36.0446 12.7142 37.5831C11.1574 39.1399 10.6266 40.9892 12.4391 42.8026L15.0402 45.4027C16.8527 47.2163 18.703 46.6854 20.2597 45.1287C21.7982 43.5901 22.3474 41.7216 20.5338 39.9091ZM18.6663 43.5351C18.0988 44.1026 17.4936 44.1577 16.8894 43.5535L14.2893 40.9524C13.6841 40.3482 13.7391 39.744 14.3077 39.1766C14.8751 38.6091 15.4977 38.5357 16.1019 39.1398L18.703 41.7399C19.3072 42.3441 19.2337 42.9677 18.6663 43.5351Z"
+                fill="#FFD15C"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="50" height="50" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </figure>
+        <div class="company-label__title">
+          BECO
+        </div>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li class="navigation__item">
+            <figure class="nav-item__logo image is-24x24">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 3H3V10H10V3Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M21 3H14V10H21V3Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M21 14H14V21H21V14Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 14H3V21H10V14Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </figure>
+            <span class="nav-item__title">Каталог</span>
+          </li>
+          <li class="navigation__item">
+            <figure class="nav-item__logo image is-24x24">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12H18L15 21L9 3L6 12H2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </figure>
+            <span class="nav-item__title">Здоровье</span>
+          </li>
+          <li class="navigation__item">
+            <figure class="nav-item__logo image is-24x24">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.93789 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7563 5.72718 21.351 5.12075 20.84 4.61V4.61Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </figure>
+            <span class="nav-item__title">Красота</span>
+          </li>
+          <li class="navigation__item">
+            <figure class="nav-item__logo image is-24x24">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M16 22V18.13C16.0375 17.6532 15.9731 17.1738 15.811 16.7238C15.6489 16.2738 15.3929 15.8634 15.06 15.52C18.2 15.17 21.5 13.98 21.5 8.52C21.4997 7.12383 20.9627 5.7812 20 4.77C20.4559 3.54851 20.4236 2.19835 19.91 0.999999C19.91 0.999999 18.73 0.649999 16 2.48C13.708 1.85882 11.292 1.85882 9 2.48C6.27 0.649999 5.09 0.999999 5.09 0.999999C4.57638 2.19835 4.54414 3.54851 5 4.77C4.03013 5.7887 3.49252 7.14346 3.5 8.55C3.5 13.97 6.8 15.16 9.94 15.55C9.611 15.89 9.35726 16.2954 9.19531 16.7399C9.03335 17.1844 8.96681 17.6581 9 18.13V22M9 19C4 20.5 4 16.5 2 16L9 19Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </figure>
+            <span class="nav-item__title">Развлечения</span>
+          </li>
+          <li class="navigation__item">
+            <figure class="nav-item__logo image is-24x24">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 3H1V16H16V3Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 8H20L23 11V16H16V8Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M5.5 21C6.88071 21 8 19.8807 8 18.5C8 17.1193 6.88071 16 5.5 16C4.11929 16 3 17.1193 3 18.5C3 19.8807 4.11929 21 5.5 21Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.5 21C19.8807 21 21 19.8807 21 18.5C21 17.1193 19.8807 16 18.5 16C17.1193 16 16 17.1193 16 18.5C16 19.8807 17.1193 21 18.5 21Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </figure>
+            <span class="nav-item__title">Авто</span>
+          </li>
+        </ul>
+      </nav>
     </aside>
     <main class="is-flex-row-grid">
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <img class="coupon__image --corner" src="./static/images/vine.png" alt="Вино наливают в бокал" />
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>пробка на мира</h3>
-                    <p>Вечер для двоих</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>50%</span>
-                    <p>СКИДКА</p>
-                </div>
-            </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <img class="coupon__image --corner" src="./static/images/vine.png" alt="Вино наливают в бокал" />
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>пробка на мира</h3>
+            <p>Вечер для двоих</p>
+          </div>
+          <div class="coupon__discount">
+            <span>50%</span>
+            <p>СКИДКА</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <img class="coupon__image" src="./static/images/beer.png" alt="Бокал пива" />
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>кино и немцы</h3>
-                    <p>Бесплатный бокал пива</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>варвар</span>
-                    <p>промкод</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <img class="coupon__image" src="./static/images/beer.png" alt="Бокал пива" />
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>кино и немцы</h3>
+            <p>Бесплатный бокал пива</p>
+          </div>
+          <div class="coupon__discount">
+            <span>варвар</span>
+            <p>промкод</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <img class="coupon__image" src="./static/images/cake.png" alt="Торт" />
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>valery cakes</h3>
-                    <p>Торт</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>30%</span>
-                    <p>СКИДКА</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <img class="coupon__image" src="./static/images/cake.png" alt="Торт" />
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>valery cakes</h3>
+            <p>Торт</p>
+          </div>
+          <div class="coupon__discount">
+            <span>30%</span>
+            <p>СКИДКА</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>sushi sell</h3>
-                    <p>Набор “Праздник”</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>45%</span>
-                    <p>СКИДКА</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>sushi sell</h3>
+            <p>Набор “Праздник”</p>
+          </div>
+          <div class="coupon__discount">
+            <span>45%</span>
+            <p>СКИДКА</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <img class="coupon__image" src="./static/images/pineapple.png" alt="Ананас" />
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>mangosteen</h3>
-                    <p>Фрукт в подарок</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>J130</span>
-                    <p>купон</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <img class="coupon__image" src="./static/images/pineapple.png" alt="Ананас" />
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>mangosteen</h3>
+            <p>Фрукт в подарок</p>
+          </div>
+          <div class="coupon__discount">
+            <span>J130</span>
+            <p>купон</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <img class="coupon__image" src="./static/images/steak.png" alt="Стейк" />
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>теленок табака</h3>
-                    <p>Стейк “Мачете”</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>20%</span>
-                    <p>СКИДКА</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <img class="coupon__image" src="./static/images/steak.png" alt="Стейк" />
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>теленок табака</h3>
+            <p>Стейк “Мачете”</p>
+          </div>
+          <div class="coupon__discount">
+            <span>20%</span>
+            <p>СКИДКА</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <img class="coupon__image" src="./static/images/shaurma.png" alt="Шаурма" />
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>fire food</h3>
-                    <p>Вторая шаурма в подарок</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>ОГОНЬ</span>
-                    <p>промкод</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <img class="coupon__image" src="./static/images/shaurma.png" alt="Шаурма" />
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>fire food</h3>
+            <p>Вторая шаурма в подарок</p>
+          </div>
+          <div class="coupon__discount">
+            <span>ОГОНЬ</span>
+            <p>промкод</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <img class="coupon__image" src="./static/images/ice-cream.png" alt="Мороженное" />
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>aroma cremeria</h3>
-                    <p>Джелато “Пармезан”</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>20%</span>
-                    <p>СКИДКА</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <img class="coupon__image" src="./static/images/ice-cream.png" alt="Мороженное" />
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>aroma cremeria</h3>
+            <p>Джелато “Пармезан”</p>
+          </div>
+          <div class="coupon__discount">
+            <span>20%</span>
+            <p>СКИДКА</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <img class="coupon__image --corner" src="./static/images/vine.png" alt="Вино наливают в бокал" />
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>пробка на мира</h3>
-                    <p>Вечер для двоих</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>J130</span>
-                    <p>КУПОН</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <img class="coupon__image --corner" src="./static/images/vine.png" alt="Вино наливают в бокал" />
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>пробка на мира</h3>
+            <p>Вечер для двоих</p>
+          </div>
+          <div class="coupon__discount">
+            <span>J130</span>
+            <p>КУПОН</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <img class="coupon__image" src="./static/images/beer.png" alt="Бокал пива" />
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>кино и немцы</h3>
-                    <p>Бесплатный бокал пива</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>варвар</span>
-                    <p>промкод</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <img class="coupon__image" src="./static/images/beer.png" alt="Бокал пива" />
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>кино и немцы</h3>
+            <p>Бесплатный бокал пива</p>
+          </div>
+          <div class="coupon__discount">
+            <span>варвар</span>
+            <p>промкод</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <img class="coupon__image" src="./static/images/cake.png" alt="Торт" />
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>valery cakes</h3>
-                    <p>Торт</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>30%</span>
-                    <p>СКИДКА</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <img class="coupon__image" src="./static/images/cake.png" alt="Торт" />
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>valery cakes</h3>
+            <p>Торт</p>
+          </div>
+          <div class="coupon__discount">
+            <span>30%</span>
+            <p>СКИДКА</p>
+          </div>
         </div>
-        <div class="coupon">
-            <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                        <feOffset dy="2" />
-                        <feGaussianBlur stdDeviation="3" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                </defs>
-            </svg>
-            <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none"
-                preserveAspectRatio="none">
-                <g filter="url(#filter0_d)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
-                        fill="none" stroke='' />
-                </g>
-            </svg>
-            <div class="coupon__body">
-                <div class="coupon__title">
-                    <h3>sushi sell</h3>
-                    <p>Набор “Праздник”</p>
-                </div>
-                <div class="coupon__discount">
-                    <span>45%</span>
-                    <p>СКИДКА</p>
-                </div>
-            </div>
+      </div>
+      <div class="coupon">
+        <svg class="coupon__svg" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter id="filter0_d" x="0" y="0" width="512" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="3" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <svg class="coupon__svg --red-border" width="100%" height="100%" viewBox="0 0 512 192" fill="none" preserveAspectRatio="none">
+          <g filter="url(#filter0_d)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 4C10.4772 4 6 8.47716 6 14V87.6534C6.07015 87.6947 6.13747 87.7459 6.20047 87.8077L11.2729 92.7863C11.6722 93.1782 11.6722 93.8216 11.2729 94.2136L6.20047 99.1921C6.13747 99.254 6.07015 99.3052 6 99.3465V174C6 179.523 10.4771 184 16 184H496C501.523 184 506 179.503 506 173.98V99.3465C505.93 99.3052 505.863 99.254 505.8 99.1921L500.727 94.2136C500.328 93.8216 500.328 93.1782 500.727 92.7863L505.8 87.8077C505.863 87.7459 505.93 87.6947 506 87.6534V14.0202C506 8.4974 501.523 4 496 4H16Z"
+              fill="none"
+              stroke=""
+            />
+          </g>
+        </svg>
+        <div class="coupon__body">
+          <div class="coupon__title">
+            <h3>sushi sell</h3>
+            <p>Набор “Праздник”</p>
+          </div>
+          <div class="coupon__discount">
+            <span>45%</span>
+            <p>СКИДКА</p>
+          </div>
         </div>
+      </div>
     </main>
-</body>
-
+  </body>
+  <script src="./template.min.js"></script>
 </html>

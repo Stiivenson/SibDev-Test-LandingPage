@@ -2,6 +2,10 @@
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 
+
+// Padding
+//////////////////////////////////////////////////////
+
 @mixin padding-top-left($value) {
     padding-top: $value;
     padding-left: $value;
@@ -9,4 +13,48 @@
 
 @mixin padding-left($value) {
     padding-left: $value;
+}
+
+
+// Transition
+//////////////////////////////////////////////////////
+
+
+@mixin transition($type, $time) {
+    transition: $type $time ease-in-out;
+}
+
+// Media
+//////////////////////////////////////////////////////
+// Breackpoins in scss/utils/_variables.scss
+
+
+@mixin lg {
+    @media only screen and (max-width: $breackpoints__lg) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (max-width: $breackpoints__md) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media only screen and (max-width: $breackpoints__sm) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-width: $breackpoints__mobile) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media only screen and (max-width: $breackpoints__xs) {
+        @content;
+    }
 }

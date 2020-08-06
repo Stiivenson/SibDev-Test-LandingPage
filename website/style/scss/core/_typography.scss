@@ -69,6 +69,11 @@ $font-size--base: 16px;
 $font-size__coefficient--large: 2.25;
 $font-size__coefficient--header: 1.75;
 $font-size__coefficient--subheading: 1.125;
+$font-size__coefficient--small: 0.875;
+
+$font-size__coefficient--header-xs: 1.5;
+$font-size__coefficient--xs: 0.75;
+
 
 // 36 28 18 16
 // 28 24 14 12
@@ -76,10 +81,16 @@ $font-size__coefficient--subheading: 1.125;
 $font-size--large: round($font-size--base * $font-size__coefficient--large); // 36px
 $font-size--header: round($font-size--base * $font-size__coefficient--header); // 28px
 $font-size--subheading: round($font-size--base * $font-size__coefficient--subheading); // 18px
+$font-size--small: round($font-size--base * $font-size__coefficient--small); // 14px
+
+$font-size--xs: round($font-size--base * $font-size__coefficient--xs); // 12px
+$font-size--header-xs: round($font-size--base * $font-size__coefficient--header-xs); // 24px
+
 
 $line-height--computed: round($font-size--base * $line-height--base);
 $line-height--large: floor($line-height--computed * $font-size__coefficient--large);
 $line-height--header: floor($line-height--computed * $font-size__coefficient--header);
+$line-height--small: floor($line-height--computed * $font-size__coefficient--small);
 
 
 // Universal Typographic Mixin
@@ -98,37 +109,99 @@ $line-height--header: floor($line-height--computed * $font-size__coefficient--he
         line-height: $line-height--header;
     }
 
+    @else if $font-size==$font-size--small {
+        line-height: $line-height--small;
+    }
+
+    @else if $font-size==$font-size--xs {
+        line-height: $line-height--xs;
+    }
+
     @else {
         line-height: $font-size;
     }
 }
 
+@mixin adaptive-text($font-size) {
+    font-size: $font-size;
+}
 
 // Base Typographic
 //////////////////////////////////////////////////////
 
+
+// Header
 h1 {
     @include text($ff__sans, $font-size--header, $fw__sans__smbold);
-}
 
-h3 {
-    @include text($ff__roboto, $font-size--base, $fw__roboto__bold);
-}
-
-p {
-    @include text($ff__roboto, $font-size--base, $fw__roboto__regular);
-}
-
-.coupon__discount span {
-    @include text($ff__roboto, $font-size--large, $fw__roboto__medium);
+    @include xs {
+        @include adaptive-text($font-size--header-xs);
+    }
 }
 
 input {
     @include text($ff__sans, $font-size--subheading, $fw__sans__regular);
+
+    @include mobile {
+        @include adaptive-text($font-size--small);
+    }
 }
+
+
+// Main
+.coupon__title {
+    h3 {
+        @include text($ff__roboto, $font-size--base, $fw__roboto__bold);
+
+        @include md {
+            @include adaptive-text($font-size--small);
+        }
+
+        @include xs {
+            @include adaptive-text($font-size--xs);
+        }
+    }
+
+    p {
+        @include text($ff__roboto, $font-size--base, $fw__roboto__regular);
+
+        @include md {
+            @include adaptive-text($font-size--small);
+        }
+
+        @include xs {
+            @include adaptive-text($font-size--xs);
+        }
+    }
+}
+
+.coupon__discount {
+    p {
+        @include text($ff__roboto, $font-size--base, $fw__roboto__regular);
+
+        @include xs {
+            @include adaptive-text($font-size--xs);
+        }
+    }
+}
+
+.coupon__discount span {
+    @include text($ff__roboto, $font-size--large, $fw__roboto__medium);
+
+    @include xs {
+        @include adaptive-text($font-size--header);
+    }
+}
+
+
+// Aside
 
 .company-label__title {
     @include text($ff__pop, $font-size--base, $fw__pop__medium);
+
+    @include md {
+        @include adaptive-text($font-size--small);
+    }
 }
 
 nav li {

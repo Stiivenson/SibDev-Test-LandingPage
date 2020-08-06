@@ -54,10 +54,11 @@ function css() {
 
 function js() {
     return src(path.src.js)
-        .pipe(concat('template.js'))
+        .pipe(concat('template.min.js'))
         .pipe(babel({
             presets: ['@babel/env']
         }))
+        .pipe(uglify())
         .pipe(dest(path.build.js))
 }
 

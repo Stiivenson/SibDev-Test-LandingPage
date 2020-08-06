@@ -18,6 +18,11 @@
     &.is-50x50 {
         height: 50px;
         width: 50px;
+
+        @include md {
+            width: 24px;
+            height: 24px;
+        }
     }
 }
 
@@ -50,4 +55,11 @@
     flex-flow: column;
     align-items: stretch;
     justify-content: flex-start;
+}
+
+.is-flex-column-cent {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }

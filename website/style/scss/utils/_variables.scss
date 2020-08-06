@@ -18,9 +18,53 @@ $color__secondary: #F3F4F9;
 $color__border: rgba(51, 51, 51, 0.2);
 $color__text-gray: rgba(0, 0, 0, 0.5);
 $color__text-aside: #333333;
+$color__aside-btn: #262626;
 
 
-// Colors
+// Padding
 //////////////////////////////////////////////////////
 
-$aside-padding: 2.5rem;
+$aside__padding: 2.5rem;
+$aside__padding-mobile: 1.25rem;
+
+
+// Width
+//////////////////////////////////////////////////////
+
+$aside__length: 240px;
+
+$aside__length-md-close: 100px;
+$aside__length-md-open: 200px;
+
+$aside__length-mobile-close: 12px;
+$aside__length-mobile-open: 190px;
+
+
+// Transition
+//////////////////////////////////////////////////////
+
+$tr__body--padding: .2s;
+
+$tr__aside: .2s;
+$tr__aside--text: .1s;
+
+$tr__coupon--border: .2s;
+
+
+// Breackpoints and containers
+//////////////////////////////////////////////////////
+
+// Large screen / LG desktop / laptops
+$breackpoints__lg: 1407px;
+
+// Medium screen / MD desktop / small screens
+$breackpoints__md: 1023px;
+
+// Small screen / SM / tablet
+$breackpoints__sm: 767px;
+
+// Small screen / phones
+$breackpoints__mobile: 550px;
+
+// Extra small screen / XS / phone
+$breackpoints__xs: 359px;

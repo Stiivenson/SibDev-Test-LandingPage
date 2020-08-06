@@ -1,60 +1,101 @@
 // Aside block with navigation
 //////////////////////////////////////////////////////
 
-
 .company-label {
     cursor: pointer;
+
     margin-bottom: 60px;
-    @include padding-top-left($aside-padding);
+    @include padding-top-left($aside__padding);
 
     .company-label__logo {
         margin-right: 10px;
+
+        @include transition(width, $tr__aside--text);
+        @include transition(height, $tr__aside--text);
     }
 }
 
-.navigation {
-    li {
-        position: relative;
-        cursor: pointer;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: flex-start;
+.navigation__item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
 
-        margin-bottom: 40px;
-        @include padding-left($aside-padding);
+    margin-bottom: 40px;
+    @include padding-left($aside__padding);
 
-        transition: color .1s ease-in-out;
+    @include transition(color, $tr__aside--text);
 
-        &:hover {
-            color: $color__blue;
+    &:hover,
+    &.--active {
+        color: $color__blue;
 
-            svg path {
-                stroke: $color__blue;
-            }
-
-            &::after {
-                left: 0;
-            }
-        }
-
-        figure {
-            margin-right: 12px;
-
-            svg path {
-                transition: stroke .1s ease-in-out;
-            }
+        svg path {
+            stroke: $color__blue;
         }
 
         &::after {
-            content: '';
-            position: absolute;
-            left: -3px;
-            height: 100%;
-            width: 3px;
-
-            background-color: $color__blue;
-            transition: left .1s ease-in-out;
+            left: 0;
         }
+    }
+
+    figure {
+        margin-right: 12px;
+
+        svg path {
+            @include transition(stroke, $tr__aside--text);
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -3px;
+        height: 100%;
+        width: 3px;
+
+        background-color: $color__blue;
+        @include transition(left, $tr__aside--text);
+    }
+}
+
+.nav-item__title,
+.company-label {
+    @include transition(opacity, $tr__aside--text);
+}
+
+
+// Adaptive styles
+//////////////////////////////////////////////////////
+
+@include md {
+    .aside__toggle-btn {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav-item__title,
+    .company-label__title {
+        opacity: 0;
+        width: 0;
+    }
+}
+
+@include mobile {
+
+    .company-label,
+    .navigation__item {
+        @include padding-left($aside__padding-mobile);
+    }
+
+    .company-label {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav-item__logo {
+        display: none;
     }
 }

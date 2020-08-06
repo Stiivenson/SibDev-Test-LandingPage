@@ -4,9 +4,11 @@
 
 body {
     position: relative;
-    padding-left: 240px;
+    padding-left: $aside__length;
 
     background-color: $color__primary;
+
+    @include transition(padding, $tr__body--padding);
 }
 
 header {
@@ -16,17 +18,82 @@ header {
 }
 
 aside {
+    z-index: 100;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
 
-    width: 240px;
+    width: $aside__length;
 
     color: $color__text-aside;
     background-color: $color__secondary;
+
+    @include transition(width, $tr__aside);
 }
 
 main {
     padding: 2.5rem 3.75rem;
+}
+
+
+// Adaptive styles
+//////////////////////////////////////////////////////
+
+@include md {
+    body {
+        padding-left: 100px;
+
+        &.--open {
+            padding-left: $aside__length-md-open;
+
+            aside {
+                width: $aside__length-md-open;
+            }
+
+            .nav-item__title,
+            .company-label__title {
+                transition-delay: $tr__aside;
+
+                opacity: 1;
+                width: auto;
+            }
+        }
+    }
+
+    aside {
+        width: $aside__length-md-close;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    main {
+        padding: 1.7rem
+    }
+}
+
+@include mobile {
+    body {
+        padding-left: $aside__length-mobile-close;
+
+        &.--open {
+            padding-left: $aside__length-mobile-close;
+
+
+            aside {
+                width: $aside__length-mobile-open;
+            }
+
+            .company-label {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+    }
+
+    aside {
+        width: $aside__length-mobile-close;
+    }
 }
