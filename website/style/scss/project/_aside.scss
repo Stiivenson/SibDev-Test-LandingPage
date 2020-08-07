@@ -57,7 +57,8 @@
         width: 3px;
 
         background-color: $color__blue;
-        @include transition(left, $tr__aside--text);
+        transition-property: left, opacity;
+        transition-duration: $tr__aside--text;
     }
 }
 
@@ -88,6 +89,10 @@
     .company-label,
     .navigation__item {
         @include padding-left($aside__padding-mobile);
+    }
+
+    .navigation__item::after {
+        opacity: 0;
     }
 
     .company-label {

@@ -90,6 +90,10 @@ main {
                 opacity: 1;
                 pointer-events: all;
             }
+
+            .navigation__item::after {
+                opacity: 1;
+            }
         }
     }
 

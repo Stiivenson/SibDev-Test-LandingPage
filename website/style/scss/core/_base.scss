@@ -28,8 +28,11 @@ body {
 button,
 input,
 textarea,
-a {
+a,
+li,
+div {
     outline: none !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:hover,
     &:active,
